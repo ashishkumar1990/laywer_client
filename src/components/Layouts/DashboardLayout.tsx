@@ -30,6 +30,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
         { text: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
         { text: 'Company', icon: <CorporateFare />, path: '/company' },
         { text: 'Users', icon: <SupervisedUserCircleRounded />, path: '/users' },
+        { text: 'CaseType', icon: <SupervisedUserCircleRounded />, path: '/cases' },
         { text: 'Settings', icon: <Settings />, path: '/settings' },
     ];
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Typography, Paper,Grid } from '@mui/material';
 import { motion } from 'framer-motion';
-import UserCountCard from "./UserCountCard";
+import UserCountCard from "./countCards/UserCountCard";
+import CompanyCountCard from "./countCards/CompanyCountCard";
+import CaseCountCard from "./countCards/caseCountCard";
 
 export default function Dashboard() {
     return (
@@ -18,6 +20,12 @@ export default function Dashboard() {
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={6} md={4}>
                                 <UserCountCard />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={4}>
+                                <CompanyCountCard />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={4}>
+                                <CaseCountCard />
                             </Grid>
                             {/* Add more cards here */}
                         </Grid>

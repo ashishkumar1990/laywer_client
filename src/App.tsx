@@ -3,13 +3,14 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
 import { Routes, Route } from 'react-router-dom';
-import LoginPage from './components/LoginPage';
+import LoginPage from './components/Auth/LoginPage';
 import Dashboard from './components/Dashboard';
-import RegisterPage from "./components/RegisterPage";
+import RegisterPage from "./components/Auth/RegisterPage";
 import ApiInterceptor from "./utils/api-interceptor";
 import DashboardLayout from "./components/Layouts/DashboardLayout";
 import List from "./components/Users/list";
 import CompanyList from "./components/Company/list";
+import CaseTypeList from "./components/CaseType/caseTypeList";
 
 function App() {
     return (
@@ -40,6 +41,14 @@ function App() {
                     element={
                         <DashboardLayout>
                             <List />
+                        </DashboardLayout>
+                    }
+                />
+                <Route
+                    path="/cases"
+                    element={
+                        <DashboardLayout>
+                            <CaseTypeList />
                         </DashboardLayout>
                     }
                 />

@@ -1,15 +1,14 @@
-// src/components/UserCountCard.tsx
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, Typography, CircularProgress } from '@mui/material';
 import { People } from '@mui/icons-material';
-import userApi from '../utils/api/user';
+import caseApi from '../../utils/api/caseType';
 
-const UserCountCard: React.FC = () => {
+const CaseCountCard: React.FC = () => {
     const [count, setCount] = useState<number | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        userApi
+        caseApi
             .getCount()
             .then((res) => setCount(res))
             .finally(() => setLoading(false));
@@ -28,7 +27,7 @@ const UserCountCard: React.FC = () => {
         >
             <CardContent>
                 <Typography variant="h6" gutterBottom>
-                    <People sx={{ mr: 1, verticalAlign: 'middle' }} /> Total Users
+                    <People sx={{ mr: 1, verticalAlign: 'middle' }} /> Total Case Type
                 </Typography>
                 {loading ? (
                     <CircularProgress size={24} sx={{ color: 'white' }} />
@@ -40,4 +39,4 @@ const UserCountCard: React.FC = () => {
     );
 };
 
-export default UserCountCard;
+export default CaseCountCard;
