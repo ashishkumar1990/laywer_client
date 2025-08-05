@@ -12,7 +12,7 @@ import {
     CssBaseline,
     IconButton
 } from '@mui/material';
-import { Home, Settings, Dashboard ,SupervisedUserCircleRounded} from '@mui/icons-material';
+import {Settings, Dashboard, SupervisedUserCircleRounded, CorporateFare} from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
 
@@ -28,6 +28,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
 
     const drawerItems = [
         { text: 'Dashboard', icon: <Dashboard />, path: '/dashboard' },
+        { text: 'Company', icon: <CorporateFare />, path: '/company' },
         { text: 'Users', icon: <SupervisedUserCircleRounded />, path: '/users' },
         { text: 'Settings', icon: <Settings />, path: '/settings' },
     ];

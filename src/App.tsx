@@ -9,6 +9,7 @@ import RegisterPage from "./components/RegisterPage";
 import ApiInterceptor from "./utils/api-interceptor";
 import DashboardLayout from "./components/Layouts/DashboardLayout";
 import List from "./components/Users/list";
+import CompanyList from "./components/Company/list";
 
 function App() {
     return (
@@ -23,6 +24,14 @@ function App() {
                     element={
                         <DashboardLayout>
                             <Dashboard />
+                        </DashboardLayout>
+                    }
+                />
+                <Route
+                    path="/company"
+                    element={
+                        <DashboardLayout>
+                            <CompanyList />
                         </DashboardLayout>
                     }
                 />
