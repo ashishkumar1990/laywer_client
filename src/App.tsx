@@ -11,6 +11,7 @@ import DashboardLayout from "./components/Layouts/DashboardLayout";
 import List from "./components/Users/list";
 import CompanyList from "./components/Company/list";
 import CaseTypeList from "./components/CaseType/caseTypeList";
+import WorkTrackerList from "./components/workTracker/workTrackerList";
 
 function App() {
     return (
@@ -49,6 +50,14 @@ function App() {
                     element={
                         <DashboardLayout>
                             <CaseTypeList />
+                        </DashboardLayout>
+                    }
+                />
+                <Route
+                    path="/workTracker"
+                    element={
+                        <DashboardLayout>
+                            <WorkTrackerList />
                         </DashboardLayout>
                     }
                 />

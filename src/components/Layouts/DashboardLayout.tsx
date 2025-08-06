@@ -31,6 +31,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
         { text: 'Company', icon: <CorporateFare />, path: '/company' },
         { text: 'Users', icon: <SupervisedUserCircleRounded />, path: '/users' },
         { text: 'CaseType', icon: <SupervisedUserCircleRounded />, path: '/cases' },
+        { text: 'Work tracker', icon: <SupervisedUserCircleRounded />, path: '/workTracker' },
         { text: 'Settings', icon: <Settings />, path: '/settings' },
     ];
 

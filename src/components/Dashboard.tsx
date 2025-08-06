@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import UserCountCard from "./countCards/UserCountCard";
 import CompanyCountCard from "./countCards/CompanyCountCard";
 import CaseCountCard from "./countCards/caseCountCard";
+import WorkTrackerCountCard from "./countCards/workTrackerCountCard";
 
 export default function Dashboard() {
     return (
@@ -26,6 +27,9 @@ export default function Dashboard() {
                             </Grid>
                             <Grid item xs={12} sm={6} md={4}>
                                 <CaseCountCard />
+                            </Grid>
+                            <Grid item xs={12} sm={6} md={4}>
+                                <WorkTrackerCountCard />
                             </Grid>
                             {/* Add more cards here */}
                         </Grid>

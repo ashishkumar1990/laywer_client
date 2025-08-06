@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 import UserFormModal from './userFormModal';
 import { getGlobalToast } from '../../context/ToastContext';
 
-interface User {
+export interface User {
     id: string;
     name: string;
     email: string;
