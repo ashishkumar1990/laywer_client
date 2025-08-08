@@ -14,6 +14,7 @@ import WorkTrackerFormModal from './workTrackerFormModal';
 import companyApi from "../../utils/api/company";
 import caseApi from "../../utils/api/caseType";
 import userApi from "../../utils/api/user";
+import {useDocumentTitle} from "../../hooks/useDocumentTitle";
 
 export interface CreateWorkTracker {
     id: string;
@@ -60,6 +61,7 @@ export interface WorkTracker {
 }
 
 const WorkTrackerList: React.FC = () => {
+    useDocumentTitle('Work Tracker');
     const [workTrackers, setWorkTrackers] = useState<WorkTracker[]>([]);
     const [initialLoading, setInitialLoading] = useState(true);
     const [backgroundLoading, setBackgroundLoading] = useState(false);

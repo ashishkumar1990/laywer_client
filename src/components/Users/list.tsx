@@ -11,6 +11,7 @@ import dayjs from 'dayjs';
 import { motion } from 'framer-motion';
 import UserFormModal from './userFormModal';
 import { getGlobalToast } from '../../context/ToastContext';
+import {useDocumentTitle} from "../../hooks/useDocumentTitle";
 
 export interface User {
     id: string;
@@ -20,6 +21,7 @@ export interface User {
 }
 
 const List: React.FC = () => {
+    useDocumentTitle('Users');
     const [users, setUsers] = useState<User[]>([]);
     const [initialLoading, setInitialLoading] = useState(true);
     const [backgroundLoading, setBackgroundLoading] = useState(false);

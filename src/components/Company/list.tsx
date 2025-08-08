@@ -16,6 +16,7 @@ import {AddCircle, Delete, Edit} from "@mui/icons-material";
 import dayjs from "dayjs";
 import {getGlobalToast} from "../../context/ToastContext";
 import CompanyFormModal from "./companyFormModal";
+import {useDocumentTitle} from "../../hooks/useDocumentTitle";
 
 export interface Company {
     id: string;
@@ -31,6 +32,7 @@ export interface Company {
 }
 
 const CompanyList: React.FC = () => {
+    useDocumentTitle('Company');
     const [companies, setCompanies] = useState<Company[]>([]);
     const [initialLoading, setInitialLoading] = useState(true);
     const [backgroundLoading, setBackgroundLoading] = useState(false);

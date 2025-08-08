@@ -11,6 +11,7 @@ import {motion} from 'framer-motion';
 import CaseTypeFormModal from './caseTypeFormModal';
 import {getGlobalToast} from '../../context/ToastContext';
 import caseTypeApi from '../../utils/api/caseType';
+import {useDocumentTitle} from "../../hooks/useDocumentTitle";
 
 export interface CaseType {
     id: string;
@@ -20,6 +21,7 @@ export interface CaseType {
 }
 
 const CaseTypeList: React.FC = () => {
+    useDocumentTitle('Case Type');
     const [caseTypes, setCaseTypes] = useState<CaseType[]>([]);
     const [initialLoading, setInitialLoading] = useState(true);
     const [backgroundLoading, setBackgroundLoading] = useState(false);

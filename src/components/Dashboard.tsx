@@ -5,8 +5,10 @@ import UserCountCard from "./countCards/UserCountCard";
 import CompanyCountCard from "./countCards/CompanyCountCard";
 import CaseCountCard from "./countCards/caseCountCard";
 import WorkTrackerCountCard from "./countCards/workTrackerCountCard";
+import {useDocumentTitle} from "../hooks/useDocumentTitle";
 
 export default function Dashboard() {
+    useDocumentTitle('Dashboard');
     return (
         <Box sx={{ p: 4 }}>
             <motion.div
